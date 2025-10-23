@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 08:39:00 by marvin            #+#    #+#             */
-/*   Updated: 2025/10/23 17:18:32 by codespace        ###   ########.fr       */
+/*   Updated: 2025/10/23 17:23:24 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ int		ft_isdigit(int c);
 int		ft_isalpha(int c);
 int		ft_isalnum(int c);
 int		ft_isascii(int c);
+int		ft_isprint(int c);
 size_t  ft_strlen(const char *str);
 
 /* 
-int		ft_isprint(int c);
 size_t	ft_strlen(const char *str);
 void	*ft_memset(void *str, int c, size_t len);
 void	ft_bzero(void *str, size_t n);

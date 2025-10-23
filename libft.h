@@ -1,20 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/23 08:37:19 by marvin            #+#    #+#             */
-/*   Updated: 2025/10/23 08:37:19 by marvin           ###   ########.fr       */
+/*   Created: 2025/10/23 08:39:00 by marvin            #+#    #+#             */
+/*   Updated: 2025/10/23 08:39:00 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef LIBFT_H
+# define LIBFT_H
 
-int ft_toupper(int c)
-{
-    if (c >= 97 && c <= 122)
-        return (c - 32);
-    return (c);
-}
+# include <stdio.h>
+# include <stdlib.h>
+# include <stddef.h>
+# include <string.h>
+# include <unistd.h>
+
+int		ft_toupper(int c);

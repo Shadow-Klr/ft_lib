@@ -1,0 +1,144 @@
+================================================================================
+           SISTEMA DE TESTING AUTOMÁTICO PARA LIBFT
+================================================================================
+
+📁 ARCHIVOS CREADOS:
+-------------------
+- test_libft.c     → Sistema de tests automático
+- Makefile         → Para compilar en Linux/Unix
+- run_tests.ps1    → Script para Windows con WSL
+- Este archivo     → Instrucciones
+
+
+🔧 CÓMO COMPILAR Y EJECUTAR LOS TESTS:
+--------------------------------------
+
+PROBLEMA: Tu sistema Windows no tiene un compilador de C instalado.
+
+SOLUCIONES:
+
+═══════════════════════════════════════════════════════════════════════════
+
+OPCIÓN 1: Usar WSL (Recomendado - Más fácil)
+───────────────────────────────────────────────
+
+1. Abre PowerShell como Administrador
+2. Ejecuta: wsl --install
+3. Reinicia tu computadora
+4. Abre PowerShell en esta carpeta
+5. Ejecuta: .\run_tests.ps1
+
+═══════════════════════════════════════════════════════════════════════════
+
+OPCIÓN 2: Instalar MinGW-w64 (Compilador GCC para Windows)
+──────────────────────────────────────────────────────────
+
+1. Descarga MinGW-w64 desde: 
+   https://www.mingw-w64.org/downloads/
+
+2. O usa winlibs: 
+   https://winlibs.com/
+   
+3. Descarga el archivo .zip (por ejemplo: GCC 13.2.0 + MinGW-w64)
+
+4. Extrae el contenido en C:\mingw64
+
+5. Agrega C:\mingw64\bin al PATH de Windows:
+   - Presiona Windows + Pausa
+   - "Configuración avanzada del sistema"
+   - "Variables de entorno"
+   - En "Variables del sistema", edita "Path"
+   - Agrega: C:\mingw64\bin
+   - Acepta todo y reinicia PowerShell
+
+6. Verifica la instalación:
+   gcc --version
+
+7. Compila y ejecuta:
+   gcc -Wall -Wextra -Werror -g ft_isalpha.c ft_isdigitit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_toupper.c ft_tolower.c ft_strlen.c test_libft.c -o test_libft.exe
+   .\test_libft.exe
+
+═══════════════════════════════════════════════════════════════════════════
+
+OPCIÓN 3: Usar un entorno Linux online
+────────────────────────────────────────
+
+1. Ve a: https://replit.com/ o https://www.onlinegdb.com/
+2. Crea un nuevo proyecto C
+3. Sube todos los archivos .c y .h
+4. Compila y ejecuta directamente desde el navegador
+
+═══════════════════════════════════════════════════════════════════════════
+
+OPCIÓN 4: Usar Visual Studio (IDE completo)
+───────────────────────────────────────────
+
+1. Descarga Visual Studio Community (gratis):
+   https://visualstudio.microsoft.com/es/downloads/
+
+2. Durante la instalación, selecciona:
+   "Desarrollo para el escritorio con C++"
+
+3. Abre Visual Studio
+4. Crea un nuevo proyecto de tipo "Aplicación de consola C"
+5. Agrega todos los archivos .c a tu proyecto
+6. Presiona F5 para compilar y ejecutar
+
+═══════════════════════════════════════════════════════════════════════════
+
+
+📊 QUÉ HACE EL SISTEMA DE TESTING:
+─────────────────────────────────
+
+El programa test_libft.c automáticamente:
+
+✅ Compara tus funciones con las funciones estándar de C
+✅ Prueba múltiples casos: valores normales, límites, negativos, etc.
+✅ Muestra resultados en colores:
+   - Verde  → Test PASADO ✓
+   - Rojo   → Test FALLADO ✗
+✅ Te dice exactamente qué valor esperaba vs qué valor obtuviste
+✅ Muestra un resumen final con estadísticas
+
+
+🔍 FUNCIONES TESTEADAS:
+───────────────────────
+
+• ft_isalpha  → Verifica si es letra alfabética
+• ft_isdigit  → Verifica si es dígito (0-9)
+• ft_isalnum  → Verifica si es alfanumérico
+• ft_isascii  → Verifica si está en rango ASCII (0-127)
+• ft_isprint  → Verifica si es carácter imprimible
+• ft_toupper  → Convierte minúscula a mayúscula
+• ft_tolower  → Convierte mayúscula a minúscula
+• ft_strlen   → Calcula longitud de cadena
+
+
+📝 EJEMPLO DE SALIDA:
+────────────────────
+
+╔════════════════════════════════════════════╗
+║   SISTEMA DE TESTING AUTOMATICO - LIBFT   ║
+╚════════════════════════════════════════════╝
+
+========================================
+  Testeando: ft_isalpha
+========================================
+[OK] isalpha(97/'a')
+[OK] isalpha(122/'z')
+[FAIL] isalpha(48/'0') - Esperado: 0, Obtenido: 1
+...
+
+========================================
+         RESUMEN DE RESULTADOS         
+========================================
+Total de tests: 87
+✓ Tests pasados: 75
+✗ Tests fallados: 12
+
+Hay 12 tests que necesitan corrección.
+
+
+================================================================================
+
+¿Necesitas ayuda adicional? Pregúntame cualquier duda.

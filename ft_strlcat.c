@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 07:44:37 by codespace         #+#    #+#             */
-/*   Updated: 2025/10/24 07:45:02 by codespace        ###   ########.fr       */
+/*   Updated: 2025/10/25 21:42:39 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
     j = 0;
     if (size > 0)
     {
-        while (dst[i] != '\0' && i < (size - 1))
+        while (dst[i] != '\0')
             i++;
         while (src[j] != '\0' && (i + j) < (size - 1))
         {
@@ -30,5 +30,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
         }
         dst[i + j] = '\0';
     }
+    if (size <= i)
+        return size + ft_strlen(src);
     return (i + ft_strlen(src));
 }

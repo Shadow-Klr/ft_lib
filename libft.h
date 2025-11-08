@@ -6,16 +6,17 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 08:39:00 by marvin            #+#    #+#             */
-/*   Updated: 2025/10/25 23:17:37 by codespace        ###   ########.fr       */
+/*   Updated: 2025/11/08 20:42:58 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# define LIBFT_H
+#ifndef LIBFT_H
 # define LIBFT_H
 
-#include <stdlib.h>
-#include <unistd.h>
+# include <stdlib.h>
+# include <unistd.h>
 
+void	ft_bzero(void *str, size_t n);
 int		ft_toupper(int c);
 int     ft_tolower(int c);
 int		ft_isdigit(int c);
@@ -24,13 +25,12 @@ int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
 int		ft_atoi(const char *str);
-size_t	ft_strlcpy(char *dst, char *src, size_t size);
+size_t	ft_strlcpy(char *dst, const *src, size_t size);
 size_t  ft_strlen(const char *str);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 
 /* 
 void	*ft_memset(void *str, int c, size_t len);
-void	ft_bzero(void *str, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memmove(void *dst, const void *src, size_t n);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
@@ -62,3 +62,5 @@ void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
  */
+
+#endif

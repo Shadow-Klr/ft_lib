@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 08:39:00 by marvin            #+#    #+#             */
-/*   Updated: 2025/11/08 20:42:58 by codespace        ###   ########.fr       */
+/*   Updated: 2025/11/09 01:36:46 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,12 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
 
 void	ft_bzero(void *str, size_t n);
 int		ft_toupper(int c);
@@ -28,6 +34,7 @@ int		ft_atoi(const char *str);
 size_t	ft_strlcpy(char *dst, const *src, size_t size);
 size_t  ft_strlen(const char *str);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
+void	ft_lstiter(t_list *lst, void (*f)(void *));
 
 /* 
 void	*ft_memset(void *str, int c, size_t len);
@@ -59,7 +66,6 @@ t_list	*ft_lstlast(t_list *lst);
 void	ft_lstadd_back(t_list **lst, t_list *new);
 void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
-void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
  */
 

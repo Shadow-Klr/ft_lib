@@ -6,20 +6,22 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 20:20:30 by codespace         #+#    #+#             */
-/*   Updated: 2025/11/08 23:03:24 by codespace        ###   ########.fr       */
+/*   Updated: 2025/11/09 00:05:06 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *str, size_t n)
+void ft_bzero(void *str, size_t n)
 {
-    size_t  i;
+	size_t	i;
 
-    i = 0;
-    while (i < n)
-    {
-        ((char *)str)[i] = '\0';
-        i++;
-    }
+	i = 0;
+    if (!str || n == 0)
+        return;
+	while (i < n)
+	{
+		((char *)str)[i] = '\0';
+		i++;
+	}
 }

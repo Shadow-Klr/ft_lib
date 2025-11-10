@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 08:39:00 by marvin            #+#    #+#             */
-/*   Updated: 2025/11/09 01:36:46 by codespace        ###   ########.fr       */
+/*   Updated: 2025/11/10 01:39:10 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ int		ft_atoi(const char *str);
 size_t	ft_strlcpy(char *dst, const *src, size_t size);
 size_t  ft_strlen(const char *str);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
+char	*ft_strchr(const char *str, int c);
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 
 /* 
@@ -41,7 +42,6 @@ void	*ft_memset(void *str, int c, size_t len);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memmove(void *dst, const void *src, size_t n);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
-char	*ft_strchr(const char *str, int c);
 char	*ft_strrchr(const char *str, int c);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
